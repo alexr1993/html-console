@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="en"/>
+<head>
+    <title>Alex Remedios</title>
+    <link rel="stylesheet" type="text/css" href="homepage.css" />
+    <meta charset="UTF-8" />
+</head>
+
+<body>
+    <div id="desktop">
+        <h1 class="name">Alex Remedios</h1>
+        <h2 class="headline">Computer Science student from London, UK</h2>
+        <h3 class="links">
+            <a class="linkedIn" target="_blank" href="https://www.linkedin.com/pub/alex-remedios/54/831/398">LinkedIn</a>
+            <a class="quora" target="_blank" href="http://www.quora.com/Alex-Remedios">Quora</a>
+            <a class="facebook" target="_blank" href="https://www.facebook.com/alex.remedios">Facebook</a>
+            <a class="googlePlus" target="_blank" href="https://plus.google.com/+AlexRemedios">Google+</a>
+            <a class="gitHub" target="_blank" href="https://github.com/alexr1993">GitHub</a>
+        </h3>
+
+        <div id="terminal" class="active">
+            <div id="menubar" class="unselectable active" draggable="true" ondragstart="drag(event)">
+                Terminal
+            </div>
+            <div id="content" class="selectable">
+               <div id="log" class="selectable">
+                </div>
+
+                <span id="prompt" class="prompt">guest@Alex-R-Homepage<span id="path"> ~ $<b class="command">&nbsp;</b></span></span><span id="command" class="command"></span><span id="endofcommand" class="unselectable command cursor">&nbsp;</span>
+            </div>
+        </div>
+    </div>
+    <input type="text" class="unselectable" id="input"></input>
+
+    <script type="text/javascript" src="model.js"></script>
+    <script type="text/javascript" src="homepage.js"></script>
+</body>
+</html>

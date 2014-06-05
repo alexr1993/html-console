@@ -1,0 +1,262 @@
+body {
+  background-color: #cccccc;
+  font-family: "ubuntu mono", inconsolata, consolas, "deja vu sans mono", monaco, courier;
+  font-size: 14px;
+  overflow: hidden;
+  background-position: 0px 0px center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin: 0;
+  text-align: center;
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited, a:link {
+  color: inherit;
+} 
+
+.linkedIn:hover {
+  color: white;
+}
+
+.quora:hover {
+  color: #A82400;
+}
+
+.facebook:hover {
+  color: #3B5998;
+}
+
+.googlePlus:hover {
+  color: #C63D2D;
+}
+
+.gitHub:hover {
+  color: white;
+}
+
+.name {
+  margin-top: 10px;
+  padding: 20px 0;
+}
+
+.headline {
+  padding: 10px 0 30px 0;
+}
+
+.links {
+  padding: 10px 0;
+  margin: 10px 700px 20px 700px;
+  background-color: rgba(21,21,21,0.25);
+  border-radius: 4px;
+}
+
+:active {
+  cursor: default;
+};
+
+::selection {
+  background-color: inherit;
+  color: inherit;
+}
+
+::-moz-selection {
+  background-color: inherit;
+  color: inherit;
+}
+
+#desktop {
+    min-width: 1755px;
+    background: url('trianglify-background-flipped1080.jpg') no-repeat;
+    margin: 0;
+    height: inherit;
+    position: absolute;
+    left: calc(50% - 877px);
+    top: 0;
+}
+
+#terminal {
+  width: 663px;
+  height: 437px;
+  background-color: rgba(21,21,21, 0.75);
+  border-radius: 6px 6px 0 0;
+  border: 2px solid rgb(240,240,240);
+  position: absolute;
+  left: calc(50% - 331px);
+  text-align: left;
+  display: default;
+}
+
+@media (max-width: 700px) {
+  #terminal {
+    display: none;
+  }
+}
+
+#terminal.active {
+  border: 2px solid rgb(220,220,220);
+}
+
+#content {
+    margin: 0 1px;
+    padding: none;
+    word-wrap: break-word;
+    word-break: break-all;
+    display: inline-block;
+    width: inherit;
+    height: 414px;
+    overflow-y: scroll; 
+    z-index: 0;
+}
+
+#menubar {
+  color: gray;
+  background: rgb(240,240,240);
+  text-align: center;
+  border-radius: 3px 3px 0 0;
+  height: 23px;
+  font-weight: bold;
+}
+
+#menubar.active {
+  color: rgb(40,40,40);
+  background: rgb(220, 220, 220);
+}
+
+#log {
+    color: white;
+    height: auto;
+    cursor: text;
+}
+
+#log::selection {
+    background-color: white;
+    color: #151515;
+}
+
+#log::-moz-selection {
+    background-color: white;
+    color: #151515;
+}
+
+.prompt {
+    color: rgb(10,240,10);
+    font-weight: bold;
+    margin: 0;
+    cursor: text;
+    margin: 0;
+}
+
+.prompt::selection {
+    background: rgb(10,240,10);
+    color: #151515;
+}
+
+.prompt::-moz-selection  {
+    background: rgb(10,240,10);
+    color: #151515;
+}
+
+#path {
+  color: #7EB6FF;
+}
+
+#path::selection {
+    background: #7EB6FF;
+    color: #151515;
+}
+
+#path::-moz-selection {
+    background: #7EB6FF;
+    color: #151515;
+}
+
+.command {
+    border: none;
+    background-color: inherit;
+    color: white;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: normal;
+    height: auto;
+    margin: 0;
+    cursor: text;
+}
+
+.command:focus {
+    outline: none;
+}
+
+.command::selection {
+    background-color: white;
+    color: #151515;
+}
+
+.command::-moz-selection {
+    background-color: white;
+    color: #151515;
+}
+
+/* from dynamicdrive.com thread */
+.cursor {
+  background-color: white;
+  color: white;
+  position: relative;
+  opacity: 0.5;
+  margin: 0;
+  -webkit-animation: blink 2s linear 0s infinite;
+  -moz-animation: blink 2s linear 0s infinite;
+  -ms-animation: blink 2s linear 0s infinite;
+  -o-animation: blink 2s linear 0s infinite;
+}
+.unselectable {
+   -webkit-user-select: none;
+   -moz-user-select: -moz-none;
+   -webkit-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+   -khtml-user-select: none;
+   cursor: default;
+}
+
+@-webkit-keyframes blink {
+  0%   { background: #aaa }
+  47%  { background: #999 }
+  50%  { background: #000 }
+  97%  { background: #000 }
+  100% { background: #999 }
+}
+ 
+@-moz-keyframes blink {
+  0%   { background: #aaa }
+  47%  { background: #999 }
+  50%  { background: #000 }
+  97%  { background: #000 }
+  100% { background: #999 }
+}
+ 
+@-ms-keyframes blink {
+  0%   { background: #aaa }
+  47%  { background: #999 }
+  50%  { background: #000 }
+  97%  { background: #000 }
+  100% { background: #999 }
+}
+ 
+@-o-keyframes blink {
+  0%   { background: #aaa }
+  47%  { background: #999 }
+  50%  { background: #000 }
+  97%  { background: #000 }
+  100% { background: #999 }
+}
+
+/* make input textfield invisible */
+#input {
+  opacity: 0;
+}
