@@ -202,40 +202,6 @@ input.onkeydown = function (e){
     }
 }
 
-var drag = function (e) {
-    var dragObj = document.querySelector('#terminal'),
-    mousePosition = [0,0];
-    
-    // mouse position relative to top right of terminal window
-    mousePosition[0] = e.offsetX || e.layerX;
-    mousePosition[1] = e.offsetY || e.layerY;
-
-    e.preventDefault();
-
-    //console.log("Mouse position in menubar: " + mousePosition);
-
-    var onmousemove = function (e) {
-        if (!e) var e = window.event;
-        // offset of terminal top left corner
-        var pxLeft = e.clientX - mousePosition[0],
-            pxTop = e.clientY - mousePosition[1],
-            distFromCenter = (window.innerWidth / 2) - pxLeft;
-
-        //console.log("Current mouse position: " + e.clientX + "," + e.clientY);
-        //console.log("Terminal top left coords: " + pxLeft + "," + pxTop);
-        dragObj.style.left = "calc(50% - " + distFromCenter + "px)";
-        dragObj.style.top = pxTop + "px";
-    };
-
-    var onmouseup = function () {
-        document.body.onmousemove = null;
-        document.body.onselectstart = null;
-        focusTerminal();
-    };
-    document.body.onmousemove = onmousemove;
-    document.onmouseup = onmouseup;
-};
-
 var focusTerminal = function (e) {
     input.focus();
     terminal.classList.add("active");
