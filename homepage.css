@@ -1,11 +1,12 @@
 body {
-    background-color: #A4A8BF;
-    font-family: "ubuntu mono", inconsolata, consolas, "deja vu sans mono", monaco, courier;
-    font-size: .9em;
-    overflow: hidden;
+    background-color: #8E9C98;
+    font-family: arial, monaco, consolas, inconsolata, "ubuntu mono", "deja vu sans mono", courier;
+    font-size: .8em;
+    -webkit-font-size: 16px;
+    -webkit-text-size-adjust: none;
     background-position: 0px 0px center;
     width: 100%;
-    height: 100%;
+    height: auto;
     position: absolute;
     margin: 0;
     text-align: center;
@@ -19,7 +20,7 @@ a {
 
 a:visited, a:link {
     color: #D3D5E0;
-} 
+}
 
 .linkedIn:hover {
     color: white;
@@ -31,7 +32,6 @@ a:visited, a:link {
 
 .facebook:hover {
     color: #606796;
-  --color: #3B5998;
 }
 
 .googlePlus:hover {
@@ -43,19 +43,19 @@ a:visited, a:link {
 }
 
 .name {
-    margin-top: 30px;
-    padding: 20px 0;
+    margin: 30px auto;
 }
 
 .headline {
-    padding: 10px 0 30px 0;
+    margin: 20px auto;
 }
 
 .links {
     padding: 10px 0;
-    margin: 10px 700px 20px 700px;
+    margin: 0 auto;
     background-color: rgba(21,21,21,0.25);
     border-radius: 4px;
+    max-width: 800px;
 }
 
 :active {
@@ -73,30 +73,39 @@ a:visited, a:link {
 }
 
 #desktop {
-    min-width: 1755px;
-    margin: 0;
+    width: 90%;
+    height: 90%;
+    margin: 0 auto;
     height: inherit;
-    position: absolute;
-    left: calc(50% - 877px);
+    position: relative;
     top: 0;
 }
 
 #terminal {
-  width: 663px;
-  height: 437px;
-  background-color: rgba(21,21,21, 0.75);
-  border-radius: 6px 6px 0 0;
-  border: 2px solid rgb(240,240,240);
-  position: absolute;
-  left: calc(50% - 331px);
-  text-align: left;
-  display: default;
+      width: 663px;
+      height: 437px;
+      background-color: rgba(21,21,21, 0.75);
+      border-radius: 6px 6px 0 0;
+      border: 2px solid rgb(240,240,240);
+      position: relative;
+      text-align: left;
+      display: default;
+      margin: 10px auto;
 }
 
-@media (max-width: 700px) {
-  #terminal {
-    display: none;
-  }
+
+@media (max-width: 750px) {
+    body {
+        overflow: hidden;
+    }
+    
+    #terminal {
+        display: none;
+    }
+
+    .name, .headline, .links {
+        margin-top: 75px;
+    }
 }
 
 #terminal.active {
@@ -261,3 +270,11 @@ a:visited, a:link {
 #input {
     opacity: 0;
 }
+
+/*
+* { background-color: rgba(255,0,0,.2); }
+* * { background-color: rgba(0,255,0,.2); }
+* * * { background-color: rgba(0,0,255,.2); }
+* * * * { background-color: rgba(255,0,255,.2); }
+* * * * * { background-color: rgba(0,255,255,.2); }
+* * * * * * { background-color: rgba(255,255,0,.2); }
