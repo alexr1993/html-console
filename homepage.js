@@ -119,20 +119,28 @@ var handleTextInput = function () {
     };
 
     var enter = function () {
-    // Write command to log
-    log.innerHTML += '<span class="prompt">' + prompt.innerHTML + '</span>';
-    log.innerHTML += escapeHTML(command.textContent);
-    log.innerHTML += "<br />";
+        var commandText = escapeHTML(command.textContent),
+            outputText;
 
-    command_stack.addCommand(command.textContent);
 
-    // remove contents of command 
-    end();
-    edit(false, command.textContent.length, false);
-    scrollToBottom();
+        // Write command to log
+        log.innerHTML += '<span class="prompt">' + prompt.innerHTML + '</span>';
+        log.innerHTML += commandText;
 
-    command_stack.addCommand("");
-};
+        if (out_content[commandText]) {
+            log.innerHTML += "<br />" + out_content[commandText];
+        }
+        log.innerHTML += "<br />";
+
+        command_stack.addCommand(command.textContent);
+
+        // remove contents of command 
+        end();
+        edit(false, command.textContent.length, false);
+        scrollToBottom();
+
+        command_stack.addCommand("");
+    };
 
 var end = function () {
     cursorMove(command.textContent.length - cursor_position);
@@ -217,6 +225,7 @@ var blurTerminal = function () {
     menubar.classList.remove("active");
     document.querySelector(".cursor").style.visibility = "hidden";
 };
-desktop.onclick = blurTerminal;
+// Blurring the terminal doesn't seem to add any value to it
+//desktop.onclick = blurTerminal;
 
 window.onload = function () { input.focus(); };
