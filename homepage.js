@@ -228,4 +228,9 @@ var blurTerminal = function () {
 // Blurring the terminal doesn't seem to add any value to it
 //desktop.onclick = blurTerminal;
 
-window.onload = function () { input.focus(); };
+window.onload = function () {
+  input.focus();
+  var post = '<a target="_blank" href="http://jukeboxxy.com">Click here to check out my app!</a>';
+  log.innerHTML += '<span class="prompt">' + prompt.innerHTML + '</span>';
+  log.innerHTML += post;
+};
