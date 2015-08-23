@@ -230,7 +230,8 @@ var blurTerminal = function () {
 
 window.onload = function () {
   input.focus();
-  var post = '<a target="_blank" href="http://jukeboxxy.com">Click here to check out my app!</a>';
+  var post = '<a target="_blank" href="http://jukeboxly.com">Click here to check out my app!</a>';
   log.innerHTML += '<span class="prompt">' + prompt.innerHTML + '</span>';
   log.innerHTML += post;
+  log.innerHTML += '<br />';
 };
